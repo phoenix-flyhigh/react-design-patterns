@@ -1,3 +1,3 @@
-import {RenderPropsPattern} from './RenderPropsPattern'
+import RenderPropsPattern from './RenderPropsPattern'
 
 export default RenderPropsPattern 
