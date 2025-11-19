@@ -2,6 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
 import NavBar from './components/NavBar'
 import RenderPropsPattern from './patterns/RenderPropsPattern'
+import CommentSection from './patterns/OptimisticUI'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Navigate to="/render" replace />} />
           <Route path="/render" element={<RenderPropsPattern />} />
+          <Route path="/optimistic" element={<CommentSection />} />
         </Routes>
       </div>
     </BrowserRouter>
