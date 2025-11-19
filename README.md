@@ -1,12 +1,45 @@
 # react-design-patterns
 
-Patterns:
+## Patterns
 
-- render props
-- HOC
-- optimistic UI
-- controlled vs uncontrolled
-- compound components
+### Render Props
+
+Build a Toggle component using the Render Props pattern.
+It should manage an internal isopen state and let the parent decide how to render open/close UI.
+
+### Higher Order Components
+
+You are building an Admin Dashboard for a React app that has multiple pages:
+ProfilePage - displays logged-in user's info
+AdminPanel visible only to admins
+ReportsPage - visible only to users with "report" permissions
+
+You already have these components but each one needs to fetch the user data, check permissions, and conditionally render UI. That's repeated logic, and the perfect case for an HOс.
+
+1. Create a Higher Order Component (HOC) named 'withUserDataAndPermissions`.
+2. This HOC should:
+  Fetch user data (simulate with a static object).
+  Check if the user has the required permissions.
+  Inject user data and permission status as props into the wrapped component.
+3. Wrap the existing components (`ProfilePage`, `AdminPanel`, `ReportsPage`) with this HOC.
+4. Each component should render differently based on the injected props:
+  `ProfilePage` should always display user info.
+  `AdminPanel should only render if the user is an admin; otherwise, show an "Access Denied" message.
+  `ReportsPage` should only render if the user has "report" permissions; otherwise, show an "Access Denied" message.
+
+### Optimistic UI
+
+Build an optimistic comment feature for a mini blog
+A comment form. When user submits:
+Immediately show the comment in the list with a "Sending..." label using useOptimistic().
+Send the comment to the server asynchronously.
+- On success, replace the optimistic entry with the server-sent item (with real id and createdAt).
+- On failure, remove the optimistic comment and show a toast/error message.
+
+
+### Controlled Component with state reducer
+
+### Compound components
 
 # React + TypeScript + Vite
 
