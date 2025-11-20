@@ -3,6 +3,7 @@ import './App.css'
 import NavBar from './components/NavBar'
 import RenderPropsPattern from './patterns/RenderPropsPattern'
 import CommentSection from './patterns/OptimisticUI'
+import HigherOrderComponents from './patterns/HigherOrderComponents'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Navigate to="/render" replace />} />
           <Route path="/render" element={<RenderPropsPattern />} />
           <Route path="/optimistic" element={<CommentSection />} />
+          <Route path="/hoc" element={<HigherOrderComponents />} />
         </Routes>
       </div>
     </BrowserRouter>
