@@ -37,9 +37,13 @@ Send the comment to the server asynchronously.
 - On failure, remove the optimistic comment and show a toast/error message.
 
 
-### Controlled Component with state reducer
+### Controlled Component
+
+User form with state reducer and error handling
 
 ### Compound components
+
+Tabs UI implemented as a compound component 
 
 # React + TypeScript + Vite
 

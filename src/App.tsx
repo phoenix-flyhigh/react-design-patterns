@@ -5,6 +5,7 @@ import RenderPropsPattern from './patterns/RenderPropsPattern'
 import CommentSection from './patterns/OptimisticUI'
 import HigherOrderComponents from './patterns/HigherOrderComponents'
 import CompoundComponent from './patterns/CompoundComponent'
+import { ControlledComponentPattern } from './patterns/ControlledComponent'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/optimistic" element={<CommentSection />} />
           <Route path="/hoc" element={<HigherOrderComponents />} />
           <Route path="/compound" element={<CompoundComponent />} />
+          <Route path="/controlled" element={<ControlledComponentPattern />} />
         </Routes>
       </div>
     </BrowserRouter>
