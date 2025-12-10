@@ -13,9 +13,9 @@ const HigherOrderComponents = () => {
   )
   return (
     <AuthProvider>
-      <div>
+      <div style={{width: "100%"}}>
         <h2>HigherOrderComponents</h2>
-        <div style={{ display: 'flex', gap: '200px' }}>
+        <div style={{ display: 'flex', width: "100%", justifyContent: "space-around" }}>
           <ProfileWithAuth />
           <AdminPanelWithAuth />
           <ResultsWithAuth />

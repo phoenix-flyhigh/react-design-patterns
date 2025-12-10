@@ -39,10 +39,10 @@ const CommentSection = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <input style={{ border: "1px solid white", color: "white" }}
+            <form onSubmit={handleSubmit} style={{ display: "flex", gap: "16px", marginBottom: "16px" }}>
+                <input style={{ border: "1px solid white", color: "white", borderRadius: "4px", padding: "8px" }}
                     type="text" name="comment" value={commentText} onChange={handleChange} />
-                <button type="submit">Send</button>
+                <button type="submit" style={{ border: "1px solid white" }}>Send</button>
             </form>
             {optimisticComments.map((comment, index) => (
                 <div key={comment.id}>{comment.text} &nbsp; <i>{isPending && index === 0 && "sending..."}</i></div>

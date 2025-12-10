@@ -34,28 +34,34 @@ export const ProfileForm = () => {
             alert("Form has errors. Please fix them before submitting.");
         }
     }
-    return <div>
+    return <div style={{ width: "70%" , display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
         <h2>
             Profile Form
         </h2>
         <form onSubmit={handleSubmit}
-            style={{ display: "flex", flexDirection: "column", gap: "8px", maxWidth: "300px" }}>
-            <label>
+            style={{ display: "flex", flexDirection: "column", gap: "16px", width: "400px", justifyContent: "center" }}>
+            <label style={{ display: "flex", gap: "4px", justifyContent: "space-between" }}>
                 Name:
-                <input type="text" name="name" value={formState.name.value} onChange={(e) => updateField("name", e.target.value)} />
-                {formState.name.error && <span style={{ color: "red" }}>{formState.name.error}</span>}
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                    <input style={{ display: "flex", flexGrow: 0 }} type="text" name="name" value={formState.name.value} onChange={(e) => updateField("name", e.target.value)} />
+                    {formState.name.error && <p style={{ color: "red" }}>{formState.name.error}</p>}
+                </div>
             </label>
-            <label>
+            <label style={{ display: "flex", gap: "4px", justifyContent: "space-between" }}>
                 Email:
-                <input type="email" name="email" value={formState.email.value} onChange={(e) => updateField("email", e.target.value)} />
-                {formState.email.error && <span style={{ color: "red" }}>{formState.email.error}</span>}
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                    <input style={{ display: "flex", flexGrow: 0 }} type="email" name="email" value={formState.email.value} onChange={(e) => updateField("email", e.target.value)} />
+                    {formState.email.error && <p style={{ color: "red" }}>{formState.email.error}</p>}
+                </div>
             </label>
-            <label>
+            <label style={{ display: "flex", gap: "4px", justifyContent: "space-between" }}>
                 Age:
-                <input type="number" name="age" value={formState.age.value || ""} onChange={(e) => updateField("age", e.target.value)} />
-                {formState.age.error && <span style={{ color: "red" }}>{formState.age.error}</span>}
+                <div style={{ display: "flex", flexDirection: "column" }}>
+                    <input style={{ display: "flex", flexGrow: 0 }} type="number" name="age" value={formState.age.value || ""} onChange={(e) => updateField("age", e.target.value)} />
+                    {formState.age.error && <p style={{ color: "red" }}>{formState.age.error}</p>}
+                </div>
             </label>
-            <button type="submit">Submit</button>
+            <button type="submit" style={{ border: "2px solid white", borderRadius: "8px" }}>Submit</button>
         </form>
     </div>;
 }
